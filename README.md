@@ -38,5 +38,39 @@ Hive
 PowerBI 
 6- Scripting 
 Python  
-************************************************************************************************************************
+************************************************************************************************************************ 
+** Setting up envronment** 
+Set up virtual environment : 
+python3.6 -m venv ./iti41
+source iti41/bin/activate 
+pip install --upgrade pip 
+pip install kafka-python
+pip install pyspark 
+pip install tweepy  
+pip install kafka
+pip install --force-reinstall pyspark==2.4.6 
+
+>> Now we can work on that environment with all the versions we need and supported by eachy other >> source iti41/bin/activate     
+
+##Error 401 
+  >> Solution >>  ntpdate -u time.google.com  
+  >> 
+
+#Create a Kafka topic: 
+cd /usr/hdp/current/kafka-broker   
+bin/kafka-topics.sh --create     --zookeeper localhost:2181     --replication-factor 1     --partitions 1     --topic tweets 
+bin/kafka-topics.sh --list --zookeeper localhost:2181   
+
+>> Run Ingesting_Real_Time_Tweets_Using_Tweepy_Kafka_Python script: 
+>> python Ingesting_Real_Time_Tweets_Using_Tweepy_Kafka_Python.py
+  
+
+>> Run Spark_Streaming_Processing script: 
+>> spark-submit --packages org.apache.spark:spark-streaming-kafka-0-10_2.11:2.4.6,org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.6 --master local[*] /root/Spark_Streaming_Processing.py 
+
+>> Create a Hive table: 
+>> create external table bigdata.tweets(user_id string,tweet_timestamp string,followers_count string,location string, text string, retweet_count string,tweet_id string,user_name string, polarity string, subjectivity string,sentiment string) stored as parquet location 'hdfs://sandbox-hdp.hortonworks.com:8020/casestudy';
+ 
+
+
 
