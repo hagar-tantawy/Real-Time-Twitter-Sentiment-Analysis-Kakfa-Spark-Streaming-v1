@@ -24,11 +24,6 @@ that use modelling best practices for big data
 Hadoop. The trainee is expected to act as an analyst who is
 willing to deliver some actionable information to business
 users.
-10- Bonus: Compare between SparkSQL connector and
-Conventional ODBC connectors (for Hive) in terms of
-Performance.
-11- Create a monitoring script in python that utilizes Ambari API
-to check the important services. 
 
 Technologies used:
 1- For streaming data from twitter use
