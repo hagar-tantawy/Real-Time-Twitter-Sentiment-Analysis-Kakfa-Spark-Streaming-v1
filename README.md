@@ -41,25 +41,24 @@ Python
 ************************************************************************************************************************ 
 ** Setting up envronment** 
 Set up virtual environment : 
-python3.6 -m venv ./iti41
-source iti41/bin/activate 
-pip install --upgrade pip 
-pip install kafka-python
-pip install pyspark 
-pip install tweepy  
-pip install kafka
-pip install --force-reinstall pyspark==2.4.6 
+>>python3.6 -m venv ./iti41
+>>source iti41/bin/activate 
+>>pip install --upgrade pip 
+>>pip install kafka-python
+>>pip install pyspark 
+>>pip install tweepy  
+>>pip install kafka
+>>pip install --force-reinstall pyspark==2.4.6 
 
 >> Now we can work on that environment with all the versions we need and supported by eachy other >> source iti41/bin/activate     
 
 ##Error 401 
   >> Solution >>  ntpdate -u time.google.com  
-  >> 
 
 #Create a Kafka topic: 
-cd /usr/hdp/current/kafka-broker   
-bin/kafka-topics.sh --create     --zookeeper localhost:2181     --replication-factor 1     --partitions 1     --topic tweets 
-bin/kafka-topics.sh --list --zookeeper localhost:2181   
+>> cd /usr/hdp/current/kafka-broker   
+>> bin/kafka-topics.sh --create     --zookeeper localhost:2181     --replication-factor 1     --partitions 1     --topic tweets 
+>> bin/kafka-topics.sh --list --zookeeper localhost:2181   
 
 >> Run Ingesting_Real_Time_Tweets_Using_Tweepy_Kafka_Python script: 
 >> python Ingesting_Real_Time_Tweets_Using_Tweepy_Kafka_Python.py
