@@ -1,6 +1,6 @@
 # Real-Time-Twitter-Sentiment-Analysis-Kakfa-Spark-Streaming 
 
-Introduction
+**Introduction**
 The project aims at building a data platform for real time
 moderation and analytics of twitter data. The implementation will
 utilize different big data technologies as Spark, Kafka and Hive, in
@@ -25,7 +25,7 @@ Hadoop. The trainee is expected to act as an analyst who is
 willing to deliver some actionable information to business
 users.
 
-Technologies used:
+**Technologies used:**
 1- For streaming data from twitter use
 Spark
 2- For queuing and persisting messages
