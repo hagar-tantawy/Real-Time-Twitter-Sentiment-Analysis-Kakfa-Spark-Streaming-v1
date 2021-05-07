@@ -71,6 +71,8 @@ bin/kafka-topics.sh --list --zookeeper localhost:2181
 >> Create a Hive table: 
 >> create external table bigdata.tweets(user_id string,tweet_timestamp string,followers_count string,location string, text string, retweet_count string,tweet_id string,user_name string, polarity string, subjectivity string,sentiment string) stored as parquet location 'hdfs://sandbox-hdp.hortonworks.com:8020/casestudy';
  
+>>Connect hive with ODBC Driver to be able to connect on power BI and make dashborads.
+
 
 
 
