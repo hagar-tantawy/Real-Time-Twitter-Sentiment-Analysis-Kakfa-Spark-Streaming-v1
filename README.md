@@ -1,5 +1,9 @@
 # Real-Time-Twitter-Sentiment-Analysis-Kakfa-Spark-Streaming 
 
+
+# Architecture 
+![](/arch2.png) 
+
 **Introduction**
 The project aims at building a data platform for real time
 moderation and analytics of twitter data. The implementation will
